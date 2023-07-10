@@ -1,14 +1,14 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import NavBar from "../NavBar";
-import Footer from "../Footer";
+import RightBar from "../RightBar";
 import "./layout.css";
 function Layout() {
   return (
     <div className="layout">
       <NavBar />
       <Outlet />
-      <Footer />
+      <RightBar />
     </div>
   );
 }

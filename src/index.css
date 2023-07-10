@@ -1,5 +1,8 @@
 :root {
+  --primary: #63e;
   --solid-black: #000000;
+  --border-color: #d8d8d8;
+  --text-gray: #828282;
 }
 
 body {
@@ -10,6 +13,10 @@ body {
 @font-face {
   font-family: SegoeBold;
   src: url(./assets/fonts/Segoe-UI-Bold.ttf);
+}
+@font-face {
+  font-family: SegoeBoldItalic;
+  src: url(./assets/fonts/Segoe-UI-Bold-Italic.ttf);
 }
 @font-face {
   font-family: SegoeNormal;
