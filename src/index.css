@@ -1,0 +1,17 @@
+:root {
+  --solid-black: #000000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: SegoeBold;
+  src: url(./assets/fonts/Segoe-UI-Bold.ttf);
+}
+@font-face {
+  font-family: SegoeNormal;
+  src: url(./assets/fonts/Segoe-UI.ttf);
+}
