@@ -1,10 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { NavContainer, NavItem } from "./NavBar.styled";
+import { NavContainer, NavText } from "./NavBar.styled";
+import { styled } from "styled-components";
+import { NavLink } from "react-router-dom";
+const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
+`;
 function NavBar() {
   return (
     <NavContainer>
-      <NavItem>Profile</NavItem>
+      <StyledNavLink to="/" activeclassname="active" className="navGroup">
+        <NavText>Home</NavText>
+      </StyledNavLink>
+      <StyledNavLink
+        to="/Profile"
+        activeclassname="active"
+        className="navGroup"
+      >
+        <NavText>Profile</NavText>
+      </StyledNavLink>
     </NavContainer>
   );
 }

@@ -2,10 +2,15 @@ import { styled } from "styled-components";
 
 const NavContainer = styled.div`
   display: flex;
+  flex-direction: column;
+  .active {
+    font-family: SegoeBold;
+  }
 `;
 
-const NavItem = styled.div`
+const NavText = styled.div`
   color: var(--solid-black);
-  font-family: SegoeBold;
+
+  font-size: 18px;
 `;
-export { NavContainer, NavItem };
+export { NavContainer, NavText };

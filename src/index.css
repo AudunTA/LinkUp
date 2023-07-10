@@ -15,3 +15,8 @@ body {
   font-family: SegoeNormal;
   src: url(./assets/fonts/Segoe-UI.ttf);
 }
+
+body {
+  font-family: SegoeNormal;
+  font-weight: 400;
+}
