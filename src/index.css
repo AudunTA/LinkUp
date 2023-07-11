@@ -3,6 +3,7 @@
   --solid-black: #000000;
   --border-color: #d8d8d8;
   --text-gray: #828282;
+  --faded-bg: rgb(247, 249, 249);
 }
 
 body {

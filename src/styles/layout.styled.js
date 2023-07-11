@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 const ContentContainer = styled.div`
   width: 100%;
-  max-width: 900px;
+  max-width: 600px;
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   margin-left: 25px;

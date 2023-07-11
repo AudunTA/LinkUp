@@ -35,6 +35,7 @@ const ButtonCreate = styled.button`
   border-radius: 26px;
   margin-top: 15px;
   background-color: var(--primary);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 28px;
 `;
 
 export { NavContainer, NavText, ButtonCreate };
