@@ -1,14 +1,7 @@
 import React from "react";
-import { TrendsContainer, RightBarContainer } from "./RigthBar.styled";
-import { BoldText } from "../../styles/text.styled";
+import "./rightbar.css";
 function RightBar() {
-  return (
-    <RightBarContainer>
-      <TrendsContainer>
-        <BoldText>Trends for you</BoldText>
-      </TrendsContainer>
-    </RightBarContainer>
-  );
+  return <div className="rightbar">Rightbar</div>;
 }
 
 export default RightBar;
