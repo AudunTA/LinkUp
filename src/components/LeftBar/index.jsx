@@ -1,10 +1,13 @@
 import React from "react";
 import "./leftbar.css";
-import * as logo from "../../assets/img/logo.svg";
+import SearchBar from "../SearchBar";
+import { MarginContainer } from "../../styles/layout.styled";
 function LeftBar() {
   return (
     <div className="leftbar">
-      <img src={logo} />
+      <MarginContainer>
+        <SearchBar />
+      </MarginContainer>
     </div>
   );
 }
