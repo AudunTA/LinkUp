@@ -3,13 +3,13 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import Feed from "./pages/Feed";
 import Profile from "./pages/Profile";
+import SignUp from "./pages/SignUp/SignUp";
 function App() {
   return (
     <Routes basename="LinkUp">
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Feed />}></Route>
-        <Route path="/Profile" element={<Profile />}></Route>
-      </Route>
+      <Route index element={<SignUp />}></Route>
+      <Route path="/Feed" element={<Feed />}></Route>
+      <Route path="/Profile" element={<Profile />}></Route>
     </Routes>
   );
 }

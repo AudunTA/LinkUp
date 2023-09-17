@@ -1,0 +1,22 @@
+.signUp-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signUp-container {
+  border: 1px solid black;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.SignUpForm {
+  width: 100%;
+}
+.group-form {
+  display: flex;
+  flex-direction: column;
+}
