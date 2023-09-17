@@ -1,37 +1,30 @@
 import React from "react";
 import "./signup.css";
-import { SignUpInput } from "../../styles/inputs.styled";
+import { useState } from "react";
+import LogInForm from "./forms/LogInForm";
+import SignUpForm from "./forms/SignUpForm";
+
 function SignUp() {
+  const [form, setForm] = useState(true);
+  const changeForm = () => {
+    setForm(!form);
+  };
   return (
     <div className="signUp-wrapper">
       <div className="signUp-container">
         <h2>Welcome to LinkUp</h2>
-        <form className="SignUpForm">
-          <div className="group-form">
-            <label htmlFor="name">Name</label>
-            <SignUpInput
-              type="text"
-              id="name"
-              placeholder="Enter your name"
-            ></SignUpInput>
+        {form ? <SignUpForm /> : <LogInForm />}
+        {form ? (
+          <div>
+            <span>Already got an account?</span>
+            <button onClick={changeForm}>Log In</button>
           </div>
-          <div className="group-form">
-            <label htmlFor="email">Email</label>
-            <SignUpInput
-              type="email"
-              id="email"
-              placeholder="Enter your Email"
-            ></SignUpInput>
+        ) : (
+          <div>
+            <span>Don't have an account?</span>
+            <button onClick={changeForm}>Sign Up</button>
           </div>
-          <div className="group-form">
-            <label htmlFor="password">Password</label>
-            <SignUpInput
-              type="password"
-              id="passwrod"
-              placeholder="Enter your Password"
-            ></SignUpInput>
-          </div>
-        </form>
+        )}
       </div>
     </div>
   );
