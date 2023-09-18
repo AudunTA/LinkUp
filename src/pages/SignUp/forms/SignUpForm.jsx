@@ -1,9 +1,11 @@
 import React from "react";
-import { SignUpInput } from "../../../styles/inputs.styled";
+import { SignUpInput, InputLabel } from "../../../styles/inputs.styled";
 import { useState } from "react";
 import { validateSignUp } from "../validation";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormSignUp, FormRow } from "../../../styles/forms.styled";
+import { registrer } from "../../../components/API/profile";
+import { BtnPrimary } from "../../../styles/buttons.styled";
 function SignUpForm() {
   const [errorApi, setErrorApi] = useState("");
   //initial form values
@@ -13,7 +15,7 @@ function SignUpForm() {
     password: "",
   };
   const submitForm = (values) => {
-    console.log(values);
+    registrer(values);
   };
   return (
     <>
@@ -29,7 +31,9 @@ function SignUpForm() {
             <>
               <FormSignUp onSubmit={handleSubmit}>
                 <FormRow>
+                  <InputLabel htmlFor="name">Name</InputLabel>
                   <SignUpInput
+                    id="name"
                     placeholder="Enter your name."
                     type="text"
                     name="name"
@@ -46,7 +50,9 @@ function SignUpForm() {
                   ) : (
                     ""
                   )}
+                  <InputLabel htmlFor="name">Email</InputLabel>
                   <SignUpInput
+                    id="email"
                     placeholder="Email"
                     type="email"
                     name="email"
@@ -59,7 +65,9 @@ function SignUpForm() {
                 </FormRow>
 
                 <FormRow>
+                  <InputLabel htmlFor="password">Password</InputLabel>
                   <SignUpInput
+                    id="password"
                     placeholder="Password"
                     type="password"
                     name="password"
@@ -71,7 +79,9 @@ function SignUpForm() {
                   )}
                 </FormRow>
 
-                <button type="submit">Sign In</button>
+                <BtnPrimary className="btnSignUp" type="submit">
+                  Sign In
+                </BtnPrimary>
               </FormSignUp>
             </>
           );
