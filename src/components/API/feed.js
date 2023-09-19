@@ -1,7 +1,7 @@
 import { baseURL } from "./baseURL";
 import { addToFeed } from "../../store/feedSlice";
 export async function getFeed(dispatch, token) {
-  const endpoint = "/posts";
+  const endpoint = "/posts?limit=5";
   const options = {
     headers: {
       "content-Type": "application/json",
