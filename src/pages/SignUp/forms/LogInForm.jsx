@@ -1,25 +1,29 @@
 import React from "react";
 import { SignUpInput } from "../../../styles/inputs.styled";
 import { useState } from "react";
-import { validateSignUp } from "../validation";
+import { validateLogIn } from "../validation";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormSignUp, FormRow } from "../../../styles/forms.styled";
 import { logIn } from "../../../components/API/profile";
+import { BtnPrimary } from "../../../styles/buttons.styled";
+import { useNavigate } from "react-router-dom";
 function LogInForm() {
+  const navigate = useNavigate();
   const [errorApi, setErrorApi] = useState("");
   //initial form values
   const initialValues = {
-    name: "",
+    email: "",
     password: "",
   };
   const submitForm = (values) => {
-    logIn(values);
+    console.log("LOL");
+    logIn(values, navigate);
   };
   return (
     <>
       <Formik
         initialValues={initialValues}
-        validationSchema={validateSignUp}
+        validationSchema={validateLogIn}
         onSubmit={submitForm}
       >
         {(formik) => {
@@ -59,7 +63,7 @@ function LogInForm() {
                   )}
                 </FormRow>
 
-                <button type="submit">Sign In</button>
+                <BtnPrimary type="submit">Sign In</BtnPrimary>
               </FormSignUp>
             </>
           );

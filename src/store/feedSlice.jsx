@@ -11,8 +11,12 @@ export const feedSlice = createSlice({
     addToFeed(state, action) {
       state.posts = action.payload;
     },
+    logStore(state, action) {
+      console.log("LOL");
+      console.log(state.feed);
+    },
   },
 });
 
-export const { addToFeed } = feedSlice.actions;
+export const { addToFeed, logStore } = feedSlice.actions;
 export const feedReducer = feedSlice.reducer;

@@ -1,3 +1,4 @@
 export function userStatus() {
-  return localStorage.getItem("name");
+  const token = localStorage.getItem("token");
+  return token;
 }

@@ -8,7 +8,7 @@ function App() {
   return (
     <Routes basename="LinkUp">
       <Route index element={<SignUp />}></Route>
-      <Route path="/Feed" element={<Feed />}></Route>
+      <Route path="/Feed" element={<Layout />}></Route>
       <Route path="/Profile" element={<Profile />}></Route>
     </Routes>
   );

@@ -1,9 +1,7 @@
-import { json } from "react-router-dom";
 import { baseURL } from "./baseURL";
-import { userStatus } from "./userstatus";
-const endpoint = "/auth/register";
 
-export async function registrer(values) {
+const endpoint = "/auth/register";
+export async function registrer(values, navigate) {
   const userInformation = {
     name: values.name,
     email: values.email,
@@ -20,14 +18,15 @@ export async function registrer(values) {
     const response = await fetch(baseURL + endpoint, options);
     const JSON = await response.json();
     if (response.status !== 400) {
-      logIn(values);
+      logIn(values, navigate);
     }
   } catch (e) {
     console.log(e);
   }
 }
 
-export async function logIn(values) {
+export async function logIn(values, navigate) {
+  console.log(navigate);
   const loginEndpoints = "/auth/login";
   const userInformationLogin = {
     email: values.email,
@@ -43,10 +42,12 @@ export async function logIn(values) {
   try {
     const response = await fetch(baseURL + loginEndpoints, options);
     const JSON = await response.json();
-    if (response.status !== 400) {
+    console.log(response.status);
+    if (response.status === 200) {
       localStorage.setItem("name", JSON.name);
       localStorage.setItem("token", JSON.accessToken);
       localStorage.setItem("email", JSON.email);
+      navigate("/Feed");
     } else {
       console.log("error");
     }

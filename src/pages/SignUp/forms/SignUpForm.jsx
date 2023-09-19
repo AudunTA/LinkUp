@@ -6,6 +6,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormSignUp, FormRow } from "../../../styles/forms.styled";
 import { registrer } from "../../../components/API/profile";
 import { BtnPrimary } from "../../../styles/buttons.styled";
+import { useNavigate } from "react-router-dom";
 function SignUpForm() {
   const [errorApi, setErrorApi] = useState("");
   //initial form values
@@ -14,8 +15,9 @@ function SignUpForm() {
     email: "",
     password: "",
   };
+  const navigate = useNavigate();
   const submitForm = (values) => {
-    registrer(values);
+    registrer(values, navigate);
   };
   return (
     <>
