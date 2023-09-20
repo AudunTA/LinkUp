@@ -1,0 +1,21 @@
+@font-face {
+  font-family: interRegular;
+  src: url(./assets/fonts/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: interBold;
+  src: url(./assets/fonts/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: NL;
+  src: url(./assets/fonts/Neuwelt-Light.ttf);
+}
+@font-face {
+  font-family: NR;
+  src: url(./assets/fonts/Neuwelt-Regular.ttf);
+}
+@font-face {
+  font-family: NB;
+  src: url(./assets/fonts/Neuwelt-Bold.ttf);
+}

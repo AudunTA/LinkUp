@@ -1,5 +1,24 @@
 .post-container {
   width: 100%;
-  background-color: aqua;
+
   border: 1px solid black;
+}
+.post-top-section {
+  font-family: NL;
+  display: flex;
+  justify-content: space-between;
+}
+.post-author {
+  display: flex;
+}
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+}
+.margin-wrapper {
+  margin: 10px;
+}
+.author-info {
+  margin-left: 5px;
 }

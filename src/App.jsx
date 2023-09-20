@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 import Feed from "./pages/Feed";
 import Profile from "./pages/Profile";
 import SignUp from "./pages/SignUp/SignUp";
+import "./App.css";
 function App() {
   return (
     <Routes basename="LinkUp">
