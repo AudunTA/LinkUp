@@ -1,7 +1,9 @@
 .post-container {
   width: 100%;
+  background-color: white;
+  border-radius: 8px;
 
-  border: 1px solid black;
+  box-shadow: var(--elevation-lined);
 }
 .post-top-section {
   font-family: NL;
@@ -17,8 +19,12 @@
   border-radius: 100%;
 }
 .margin-wrapper {
-  margin: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
 }
 .author-info {
   margin-left: 5px;
+}
+.post-media {
+  width: 100%;
 }
