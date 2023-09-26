@@ -1,6 +1,12 @@
 .leftbar {
   max-width: 225px;
   width: 100%;
-  background-color: #1f1f1f;
+
   height: 100vh;
+  border-radius: 8px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+
+  box-shadow: var(--elevation-lined);
 }

@@ -1,13 +1,15 @@
 .search-input {
-  border: 1px solid #333333;
-  background-color: #292929;
+  border: none;
+  box-shadow: var(--elevation-lined);
+  background-color: #edf3f8;
   height: 30px;
   width: 100%;
   display: flex;
   align-items: center;
   border-radius: 8px;
+
   ::placeholder {
-    color: var(--text-gray);
+    color: var(--primary-text);
   }
 }
 
@@ -27,5 +29,5 @@
 input,
 select,
 textarea {
-  color: white;
+  color: var(--primary-text);
 }
