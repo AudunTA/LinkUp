@@ -24,9 +24,9 @@ function Post({ post }) {
         </div>
         <div className="post-body-section">
           <TextMedium>{post.body}</TextMedium>
-          {post.media ? <img className="post-media" src={post.media} /> : "no"}
         </div>
       </div>
+      {post.media ? <img className="post-media" src={post.media} /> : ""}
     </div>
   );
 }
